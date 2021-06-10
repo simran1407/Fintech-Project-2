@@ -8,7 +8,21 @@ Machine learning is a subset of artificial intelligence involved with the creati
 
 ### *Import requests* 
 
+(impoprts to be added from the notebook)
+
 ### *We used the following Machine Learning algorithms for our Stock Prediction model.
 1. Decision Trees
 2. Random Forests
 3. 
+
+
+## *RESULTS FROM THE PREDICTIONS*
+
+After running the test data on the LSTM model, the predictions were pretty close to the actual readings. As you can see in the graph here, the predicted and the actual values are going hand in hand.
+
+
+(graphs to be added here)
+
+
+
+### *SOURCES*
