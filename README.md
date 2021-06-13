@@ -43,11 +43,9 @@ The first step is to intitialize imports and prepare the data. We load the datas
 
 
 
+## *MODELS USED FOR TRAINING*
 
 
-
-
-### *We used the following Machine Learning algorithms for our Stock Prediction model.
 
 
 ## *RESULTS FROM THE PREDICTIONS*
