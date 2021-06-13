@@ -4,10 +4,21 @@
 
 ## *OVERVIEW*
 
-Machine learning is a subset of artificial intelligence involved with the creation of algorithms that can change itself without human intervention to produce an output by feeding itself through structured data. In this project, we created a model that makes a 7-day prediction for a particular stock/ticker using Machine Learning with Python. We were able to extract data from Yahoo Finance and run it through our prepared model to get the predictions that help us make buying and selling decisions on our stocks.
+Machine learning is a subset of artificial intelligence involved with the creation of algorithms that can change itself without human intervention to produce an output by feeding itself through structured data. In this project, we created a model that makes a 7-day prediction for a particular stock/ticker using different machine learning models.We were able to extract data from Yahoo Finance and run it through our prepared model to get the predictions that help us make buying and selling decisions on our stocks.
 
-### *Import requests* 
-!<img width="413" alt="imports" src="https://user-images.githubusercontent.com/78338890/121817980-7a873d00-cc52-11eb-9d4d-95eb699162f5.png">
+## *Dataset and features*
+
+The first step is to intitialize imports and prepare the data. We load the dataset and calculate the indicators- RSI, MACD and CMF. The dataset was downloaded from the YahooFinance. 
+
+#### *Initial imports*
+<img width="413" alt="imports" src="https://user-images.githubusercontent.com/78338890/121817980-7a873d00-cc52-11eb-9d4d-95eb699162f5.png">
+
+#### *Identifying the ticker we want to analyze (AAPL) and importing data from Yahoo Finance*
+<img width="687" alt="Screen Shot 2021-06-13 at 14 27 46" src="https://user-images.githubusercontent.com/78338890/121818161-917a5f00-cc53-11eb-89b8-a3ca131e3765.png">
+
+#### *Calculating Indicators- RSI, MACD, CMF*
+
+<img width="1043" alt="Screen Shot 2021-06-13 at 14 33 22" src="https://user-images.githubusercontent.com/78338890/121818315-6ba18a00-cc54-11eb-9a1e-5a9803960538.png">
 
 
 
