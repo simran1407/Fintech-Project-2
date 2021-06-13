@@ -17,8 +17,10 @@ The first step is to intitialize imports and prepare the data. We load the datas
 <img width="687" alt="Screen Shot 2021-06-13 at 14 27 46" src="https://user-images.githubusercontent.com/78338890/121818161-917a5f00-cc53-11eb-89b8-a3ca131e3765.png">
 
 #### *Calculating Indicators- RSI, MACD, CMF*
-
 <img width="1043" alt="Screen Shot 2021-06-13 at 14 33 22" src="https://user-images.githubusercontent.com/78338890/121818315-6ba18a00-cc54-11eb-9a1e-5a9803960538.png">
+
+##### *Plots of the three indicators*
+<img width="927" alt="Screen Shot 2021-06-13 at 14 39 34" src="https://user-images.githubusercontent.com/78338890/121818454-3f3a3d80-cc55-11eb-99b0-39ce27a33ec2.png">
 
 
 
