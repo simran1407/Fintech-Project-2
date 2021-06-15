@@ -82,7 +82,8 @@ The first step is to intitialize imports and prepare the data. We load the datas
 - Creating dataframes of predicted close prices (for next 7 days), defining start date as tomorrow and a dateframe with just the Dates (of next 7 days).
 - Concatenate the two dataframes into one and rename respective columns to Date and Predicted price.
 
-<img width="426" alt="Screen Shot 2021-06-15 at 00 04 04" src="https://user-images.githubusercontent.com/78338890/121991218-3dfc3400-cd6d-11eb-8237-a1da184ec63a.png">
+<img width="385" alt="Screen Shot 2021-06-15 at 00 06 09" src="https://user-images.githubusercontent.com/78338890/121991373-8d426480-cd6d-11eb-83da-c8f18f6061f3.png">
+
 <img width="1033" alt="Screen Shot 2021-06-15 at 00 05 00" src="https://user-images.githubusercontent.com/78338890/121991292-5ec48980-cd6d-11eb-86e0-a9ae155b2f26.png">
 
 
