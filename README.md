@@ -108,6 +108,9 @@ The first step is to intitialize imports and prepare the data. We load the datas
 - Display actual AAPL stock price and compare to see which model predicted the most accurate price.
 <img width="235" alt="Screen Shot 2021-06-16 at 23 16 55" src="https://user-images.githubusercontent.com/78338890/122325682-07ebbb00-cef9-11eb-9f39-706a13c8632b.png">
 
+## *RESULTS FROM THE PREDICTIONS*
+
+After running the above models, the predictions from ARIMA were pretty close to the actual readings so we picked ARIMA as the most accurate out of the three.
 
 ### *Model 4: Predict Stock Prices Change using Random Forest*
 
@@ -162,13 +165,6 @@ Moving Average (MA) Crossover indicator signals a crossover of a slower moving a
 <img width="541" alt="Screen Shot 2021-06-16 at 23 54 39" src="https://user-images.githubusercontent.com/78338890/122328840-52bc0180-cefe-11eb-955f-fcd02a049c82.png">
 <img width="1057" alt="Screen Shot 2021-06-16 at 23 54 53" src="https://user-images.githubusercontent.com/78338890/122328849-58b1e280-cefe-11eb-94bd-881daebeb636.png">
 
-
-## *RESULTS FROM THE PREDICTIONS*
-
-After running the test data on the LSTM model, the predictions were pretty close to the actual readings. As you can see in the graph here, the predicted and the actual values are going hand in hand.
-
-
-(graphs to be added here)
 
 
 ### *SOURCES*
