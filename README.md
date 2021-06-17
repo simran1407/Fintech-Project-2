@@ -51,11 +51,11 @@ The first step is to intitialize imports and prepare the data. We load the datas
 
 ### *MODEL 1- Forecasting stock prices using LSTM*
 
-- Set Index Date as string type.
-- Select features from the dataset that are to be used for training and predicting. In our case, Columns 0 to 5.
+- Set Index Date as string type
+- Select features from the dataset that are to be used for training and predicting. In our case, Columns 0 to 5
 - Create array for LSTM model to run
-<img width="364" alt="Screen Shot 2021-06-14 at 22 58 37" src="https://user-images.githubusercontent.com/78338890/121986184-16ed3480-cd64-11eb-974a-3c174d7c4c6b.png"> 
-- Scale the features and create a datastructure with 90 timestamps and 1 output.
+<img width="364" alt="Screen Shot 2021-06-14 at 22 58 37" src="https://user-images.githubusercontent.com/78338890/121986184-16ed3480-cd64-11eb-974a-3c174d7c4c6b.png">
+- Scale the features and create a datastructure with 90 timestamps and 1 output
 - Now, initialize the LSTM based Neural Network
 <img width="550" alt="Screen Shot 2021-06-14 at 22 59 39" src="https://user-images.githubusercontent.com/78338890/121986499-9a0e8a80-cd64-11eb-9d4a-e3692966906e.png">
 
