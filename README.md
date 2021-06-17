@@ -144,6 +144,21 @@ The first step is to intitialize imports and prepare the data. We load the datas
 
 - For this, we used the concatenated dataframe with the historical and 7 days of precicted prices.
 <img width="224" alt="Screen Shot 2021-06-16 at 23 45 56" src="https://user-images.githubusercontent.com/78338890/122328151-205dd480-cefd-11eb-8266-a5929fd27dfc.png">
+- Calculate, rolling mean and rolling standard deviation with window of 20 days as well as calculate rolling upper and rolling lower and plot the Bollinger bands.
+<img width="1050" alt="Screen Shot 2021-06-16 at 23 49 08" src="https://user-images.githubusercontent.com/78338890/122328347-7cc0f400-cefd-11eb-8174-ec08e2cd1aae.png">
+- Define data, data = df.Close
+- Creating the Trading Strategy and define signals.
+<img width="581" alt="Screen Shot 2021-06-16 at 23 51 02" src="https://user-images.githubusercontent.com/78338890/122328484-beea3580-cefd-11eb-8203-70eabc65a418.png">
+- Plot the Bollinger bands signals
+<img width="581" alt="Screen Shot 2021-06-16 at 23 51 02" src="https://user-images.githubusercontent.com/78338890/122328564-e80ac600-cefd-11eb-9462-d7bd0e09611c.png">
+
+### *Moving Average Crossover trading signal*
+
+Moving Average (MA) Crossover indicator signals a crossover of a slower moving average or a longer period moving average by a faster moving average or a shorter period moving average. The MA crossover shows when the longer period moving average line cross a shorter period moving average line.
+
+<img width="585" alt="Screen Shot 2021-06-16 at 23 54 24" src="https://user-images.githubusercontent.com/78338890/122328829-4d5eb700-cefe-11eb-8a2b-5714765e8a2f.png">
+<img width="541" alt="Screen Shot 2021-06-16 at 23 54 39" src="https://user-images.githubusercontent.com/78338890/122328840-52bc0180-cefe-11eb-955f-fcd02a049c82.png">
+<img width="1057" alt="Screen Shot 2021-06-16 at 23 54 53" src="https://user-images.githubusercontent.com/78338890/122328849-58b1e280-cefe-11eb-94bd-881daebeb636.png">
 
 
 
@@ -164,5 +179,5 @@ After running the test data on the LSTM model, the predictions were pretty close
 - https://github.com/vb100/multivariate-lstm/blob/master/LSTM_model_stocks.ipynb
 - https://www.tradingview.com/support/solutions/43000501974-chaikin-money-flow-cmf/
 - https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/bollinger-bands
-
+- https://patternswizard.com/moving-average-crossover/
 
