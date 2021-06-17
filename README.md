@@ -55,6 +55,7 @@ The first step is to intitialize imports and prepare the data. We load the datas
 - Select features from the dataset that are to be used for training and predicting. In our case, Columns 0 to 5
 - Create array for LSTM model to run
 <img width="364" alt="Screen Shot 2021-06-14 at 22 58 37" src="https://user-images.githubusercontent.com/78338890/121986184-16ed3480-cd64-11eb-974a-3c174d7c4c6b.png">
+
 - Scale the features and create a datastructure with 90 timestamps and 1 output
 - Now, initialize the LSTM based Neural Network
 <img width="550" alt="Screen Shot 2021-06-14 at 22 59 39" src="https://user-images.githubusercontent.com/78338890/121986499-9a0e8a80-cd64-11eb-9d4a-e3692966906e.png">
@@ -66,6 +67,7 @@ The first step is to intitialize imports and prepare the data. We load the datas
 - Convert Pandas Timestamp to Datetime object
 - Perform predictions 
 <img width="768" alt="Screen Shot 2021-06-14 at 23 45 31" src="https://user-images.githubusercontent.com/78338890/121989792-b4e3fd80-cd6a-11eb-9ca7-4d290073a892.png">
+
 - Plotting predicted stock price
 <img width="1011" alt="Screen Shot 2021-06-14 at 23 48 40" src="https://user-images.githubusercontent.com/78338890/121990062-291ea100-cd6b-11eb-8a5c-22a1d6395fa0.png">
 
@@ -90,10 +92,12 @@ The first step is to intitialize imports and prepare the data. We load the datas
 
 - Create a new dataframe for this model by selecting only the Close price from our original df.
 <img width="231" alt="Screen Shot 2021-06-16 at 23 03 26" src="https://user-images.githubusercontent.com/78338890/122324622-1afd8b80-cef7-11eb-8f34-d145dc284446.png">
+
 - Reset Index and use the 'rename' function to change the name of the columns to "Date" and "Close".
 - Fit the new dataframe in Prophet model and set the forecast period (in our case, 14 days).
 - Display the dataframe with predicted prices where "yhat" is Close price, "yhat_lower" is lowest price for the day and "yhat_upper" is the highest price for the day.
 <img width="402" alt="Screen Shot 2021-06-16 at 23 08 48" src="https://user-images.githubusercontent.com/78338890/122325024-d7efe800-cef7-11eb-92dd-0ee7cce81ef5.png">
+
 - Plot predicted prices.
 <img width="671" alt="Screen Shot 2021-06-16 at 23 10 43" src="https://user-images.githubusercontent.com/78338890/122325211-27ceaf00-cef8-11eb-80ee-aa0d6cb3c7a9.png">
 <img width="615" alt="Screen Shot 2021-06-16 at 23 11 00" src="https://user-images.githubusercontent.com/78338890/122325220-2d2bf980-cef8-11eb-98c7-92d89a37d1b7.png">
@@ -105,6 +109,7 @@ The first step is to intitialize imports and prepare the data. We load the datas
 - Create a 3rd dataframe with Close price prediction from ARIMA model.
 - Concatenate all the three dataframes into one and rename columns.
 <img width="378" alt="Screen Shot 2021-06-16 at 23 16 25" src="https://user-images.githubusercontent.com/78338890/122325709-1043f600-cef9-11eb-8424-6747baf4ce5c.png">
+
 - Display actual AAPL stock price and compare to see which model predicted the most accurate price.
 <img width="235" alt="Screen Shot 2021-06-16 at 23 16 55" src="https://user-images.githubusercontent.com/78338890/122325682-07ebbb00-cef9-11eb-9f39-706a13c8632b.png">
 
@@ -116,6 +121,7 @@ After running the above models, the predictions from ARIMA were pretty close to 
 
 - First, plot 1-day percentage change of adjusted close price in a histogram.
 <img width="1012" alt="Screen Shot 2021-06-16 at 23 21 26" src="https://user-images.githubusercontent.com/78338890/122326019-9ceeb400-cef9-11eb-8934-0123eb3ac7e6.png">
+
 - Create an empty list to hold the feature names.
 - In a for loop, use the ta-lib library SMA and RSI methods to calculate the SMA-14, SMA-30, SMA-50, & SMA-200 and also RSI-14, RSI-30, RSI-50, & RSI-200.
 - Append the moving average and rsi variable names to the feature_names list.
@@ -128,16 +134,19 @@ After running the above models, the predictions from ARIMA were pretty close to 
 -  Assign the last 15% of the feature values and target values to X_test and y_test, respectively.
 -  Set a dictionary of parameters for our random forest model. 
 <img width="521" alt="Screen Shot 2021-06-16 at 23 30 55" src="https://user-images.githubusercontent.com/78338890/122326844-eee40980-cefa-11eb-8412-ba79f3f4e049.png">
+
 - Create an empty list to hold the values test_score for different parameter sets.
 - Create a scikit-learn RandomForestRegressor object.
 - Use a for-loop to iterate through the parameter value in the grid dictionary, apply the parameter set to the random forest model using the set_params function and fit the model with the training set, X_train & y_train.
 - Use the NumPy argmax function to get the index of the highest test score from the list and print the best test score and parameter set.
 - Fit X_train and y_train in the Random Forest model. Predict "y" and plot the preciction.
 <img width="1029" alt="Screen Shot 2021-06-16 at 23 35 04" src="https://user-images.githubusercontent.com/78338890/122327384-c577ad80-cefb-11eb-9d93-7c3e37e27348.png">
+
   ##### *Now evaluating our RF model*
 
 - Use scikit-learn metrics module to calculate the MAE, MSE, and RMSE and then print them out.
 <img width="516" alt="Screen Shot 2021-06-16 at 23 38 58" src="https://user-images.githubusercontent.com/78338890/122327557-0e2f6680-cefc-11eb-9d5f-930cd0de56f8.png">
+
 - Now combine historical close price with ARIMA model's predicted close price and plot it. We used ARIMA predictions because ARIMA model gave us the most accurate/closest price to the actual close price.
 <img width="1012" alt="Screen Shot 2021-06-16 at 23 43 51" src="https://user-images.githubusercontent.com/78338890/122327948-bcd3a700-cefc-11eb-8f11-4ee80597b8ed.png">
 
@@ -147,11 +156,14 @@ After running the above models, the predictions from ARIMA were pretty close to 
 
 - For this, we used the concatenated dataframe with the historical and 7 days of precicted prices.
 <img width="224" alt="Screen Shot 2021-06-16 at 23 45 56" src="https://user-images.githubusercontent.com/78338890/122328151-205dd480-cefd-11eb-8266-a5929fd27dfc.png">
+
 - Calculate, rolling mean and rolling standard deviation with window of 20 days as well as calculate rolling upper and rolling lower and plot the Bollinger bands.
 <img width="1050" alt="Screen Shot 2021-06-16 at 23 49 08" src="https://user-images.githubusercontent.com/78338890/122328347-7cc0f400-cefd-11eb-8174-ec08e2cd1aae.png">
+
 - Define data, data = df.Close
 - Creating the Trading Strategy and define signals.
 <img width="581" alt="Screen Shot 2021-06-16 at 23 51 02" src="https://user-images.githubusercontent.com/78338890/122328484-beea3580-cefd-11eb-8203-70eabc65a418.png">
+
 - Plot the Bollinger bands signals
 <img width="581" alt="Screen Shot 2021-06-16 at 23 51 02" src="https://user-images.githubusercontent.com/78338890/122328564-e80ac600-cefd-11eb-9462-d7bd0e09611c.png">
 
@@ -161,6 +173,7 @@ Moving Average (MA) Crossover indicator signals a crossover of a slower moving a
 
 - Set the long and short windows, generate short and long MAs, generate trading signals and calculate the points in time at which a position should be taken.
 <img width="585" alt="Screen Shot 2021-06-16 at 23 54 24" src="https://user-images.githubusercontent.com/78338890/122328829-4d5eb700-cefe-11eb-8a2b-5714765e8a2f.png">
+
 - Plot everything
 <img width="541" alt="Screen Shot 2021-06-16 at 23 54 39" src="https://user-images.githubusercontent.com/78338890/122328840-52bc0180-cefe-11eb-955f-fcd02a049c82.png">
 <img width="1057" alt="Screen Shot 2021-06-16 at 23 54 53" src="https://user-images.githubusercontent.com/78338890/122328849-58b1e280-cefe-11eb-94bd-881daebeb636.png">
