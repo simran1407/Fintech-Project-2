@@ -87,6 +87,54 @@ The first step is to intitialize imports and prepare the data. We load the datas
 <img width="1033" alt="Screen Shot 2021-06-15 at 00 05 00" src="https://user-images.githubusercontent.com/78338890/121991292-5ec48980-cd6d-11eb-86e0-a9ae155b2f26.png">
 
 
+### *MODEL 1- Forecasting stock prices using Prophet*
+
+- Create a new dataframe for this model by selecting only the Close price from our original df.
+<img width="231" alt="Screen Shot 2021-06-16 at 23 03 26" src="https://user-images.githubusercontent.com/78338890/122324622-1afd8b80-cef7-11eb-8f34-d145dc284446.png">
+- Reset Index and use the 'rename' function to change the name of the columns to "Date" and "Close".
+- Fit the new dataframe in Prophet model and set the forecast period (in our case, 14 days).
+- Display the dataframe with predicted prices where "yhat" is Close price, "yhat_lower" is lowest price for the day and "yhat_upper" is the highest price for the day.
+<img width="402" alt="Screen Shot 2021-06-16 at 23 08 48" src="https://user-images.githubusercontent.com/78338890/122325024-d7efe800-cef7-11eb-92dd-0ee7cce81ef5.png">
+- Plot predicted prices.
+<img width="671" alt="Screen Shot 2021-06-16 at 23 10 43" src="https://user-images.githubusercontent.com/78338890/122325211-27ceaf00-cef8-11eb-80ee-aa0d6cb3c7a9.png">
+<img width="615" alt="Screen Shot 2021-06-16 at 23 11 00" src="https://user-images.githubusercontent.com/78338890/122325220-2d2bf980-cef8-11eb-98c7-92d89a37d1b7.png">
+
+## *Comparing price predictions of each of the models with actual stock(AAPL) Close price*
+
+- Create a dataframe with only Close price prediction from Prophet model.
+- Create a 2nd dataframe with Close price prediction from LSTM model.
+- Create a 3rd dataframe with Close price prediction from ARIMA model.
+- Concatenate all the three dataframes into one and rename columns.
+<img width="378" alt="Screen Shot 2021-06-16 at 23 16 25" src="https://user-images.githubusercontent.com/78338890/122325709-1043f600-cef9-11eb-8424-6747baf4ce5c.png">
+- Display actual AAPL stock price and compare to see which model predicted the most accurate price.
+<img width="235" alt="Screen Shot 2021-06-16 at 23 16 55" src="https://user-images.githubusercontent.com/78338890/122325682-07ebbb00-cef9-11eb-9f39-706a13c8632b.png">
+
+
+### *Model 4: Predict Stock Prices Change using Random Forest*
+
+- First, plot 1-day percentage change of adjusted close price in a histogram.
+<img width="1012" alt="Screen Shot 2021-06-16 at 23 21 26" src="https://user-images.githubusercontent.com/78338890/122326019-9ceeb400-cef9-11eb-8934-0123eb3ac7e6.png">
+- Create an empty list to hold the feature names.
+- In a for loop, use the ta-lib library SMA and RSI methods to calculate the SMA-14, SMA-30, SMA-50, & SMA-200 and also RSI-14, RSI-30, RSI-50, & RSI-200.
+- Append the moving average and rsi variable names to the feature_names list.
+- use the dataframe pct_change method again to calculate the daily volume change percentage and add the volume feature name to the list
+-  shift price values forward to the next 7 indexes.
+-  7-days future close price change percentage.
+-  Drop nulls.
+-  Assign feature_names list to variable X and 7-day future close price percentage column to variable y.
+-  Set training size to 85% of the entire dataset and assign the first 85% of the feature values and target values to X_train and y_train, respectively.
+-  Assign the last 15% of the feature values and target values to X_test and y_test, respectively.
+-  Set a dictionary of parameters for our random forest model. 
+<img width="521" alt="Screen Shot 2021-06-16 at 23 30 55" src="https://user-images.githubusercontent.com/78338890/122326844-eee40980-cefa-11eb-8412-ba79f3f4e049.png">
+- Create an empty list to hold the values test_score for different parameter sets.
+- Create a scikit-learn RandomForestRegressor object.
+- Use a for-loop to iterate through the parameter value in the grid dictionary, apply the parameter set to the random forest model using the set_params function and fit the model with the training set, X_train & y_train.
+- Use the NumPy argmax function to get the index of the highest test score from the list and print the best test score and parameter set.
+- Fit X_train and y_train in the Random Forest model. Predict "y" and plot the preciction.
+<img width="1029" alt="Screen Shot 2021-06-16 at 23 35 04" src="https://user-images.githubusercontent.com/78338890/122327384-c577ad80-cefb-11eb-9d93-7c3e37e27348.png">
+- 
+
+
 
 ## *RESULTS FROM THE PREDICTIONS*
 
@@ -94,7 +142,6 @@ After running the test data on the LSTM model, the predictions were pretty close
 
 
 (graphs to be added here)
-
 
 
 ### *SOURCES*
