@@ -156,11 +156,11 @@ The first step is to intitialize imports and prepare the data. We load the datas
 
 Moving Average (MA) Crossover indicator signals a crossover of a slower moving average or a longer period moving average by a faster moving average or a shorter period moving average. The MA crossover shows when the longer period moving average line cross a shorter period moving average line.
 
+- Set the long and short windows, generate short and long MAs, generate trading signals and calculate the points in time at which a position should be taken.
 <img width="585" alt="Screen Shot 2021-06-16 at 23 54 24" src="https://user-images.githubusercontent.com/78338890/122328829-4d5eb700-cefe-11eb-8a2b-5714765e8a2f.png">
+- Plot everything
 <img width="541" alt="Screen Shot 2021-06-16 at 23 54 39" src="https://user-images.githubusercontent.com/78338890/122328840-52bc0180-cefe-11eb-955f-fcd02a049c82.png">
 <img width="1057" alt="Screen Shot 2021-06-16 at 23 54 53" src="https://user-images.githubusercontent.com/78338890/122328849-58b1e280-cefe-11eb-94bd-881daebeb636.png">
-
-
 
 
 ## *RESULTS FROM THE PREDICTIONS*
