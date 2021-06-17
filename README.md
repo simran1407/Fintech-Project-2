@@ -32,7 +32,6 @@ The first step is to intitialize imports and prepare the data. We load the datas
 
 - Chaikin Money Flow (CMF) is a technical analysis indicator used to measure Money Flow Volume over a set period of time. Money Flow Volume (a concept also created by Marc Chaikin) is a metric used to measure the buying and selling pressure of a security for single period.
 
-- Bollinger Bands are a type of price envelope developed by John BollingerOpens in a new window. (Price envelopes define upper and lower price range levels.) Bollinger Bands are envelopes plotted at a standard deviation level above and below a simple moving average of the price. Because the distance of the bands is based on standard deviation, they adjust to volatility swings in the underlying price. Bollinger Bands use 2 parameters, Period and Standard Deviations, StdDev. The default values are 20 for period, and 2 for standard deviations, although you may customize the combinations. Bollinger bands help determine whether prices are high or low on a relative basis. They are used in pairs, both upper and lower bands and in conjunction with a moving average. Further, the pair of bands is not intended to be used on its own. Use the pair to confirm signals given with other indicators.
 
 <img width="1274" alt="Screen Shot 2021-06-14 at 22 46 34" src="https://user-images.githubusercontent.com/78338890/121985250-6894bf80-cd62-11eb-9dac-75de637170b7.png">
 
@@ -132,7 +131,20 @@ The first step is to intitialize imports and prepare the data. We load the datas
 - Use the NumPy argmax function to get the index of the highest test score from the list and print the best test score and parameter set.
 - Fit X_train and y_train in the Random Forest model. Predict "y" and plot the preciction.
 <img width="1029" alt="Screen Shot 2021-06-16 at 23 35 04" src="https://user-images.githubusercontent.com/78338890/122327384-c577ad80-cefb-11eb-9d93-7c3e37e27348.png">
-- 
+  ##### *Now evaluating our RF model*
+
+- Use scikit-learn metrics module to calculate the MAE, MSE, and RMSE and then print them out.
+<img width="516" alt="Screen Shot 2021-06-16 at 23 38 58" src="https://user-images.githubusercontent.com/78338890/122327557-0e2f6680-cefc-11eb-9d5f-930cd0de56f8.png">
+- Now combine historical close price with ARIMA model's predicted close price and plot it. We used ARIMA predictions because ARIMA model gave us the most accurate/closest price to the actual close price.
+<img width="1012" alt="Screen Shot 2021-06-16 at 23 43 51" src="https://user-images.githubusercontent.com/78338890/122327948-bcd3a700-cefc-11eb-8f11-4ee80597b8ed.png">
+
+### *Bollinger bands trading srategy and signals*
+
+- Bollinger Bands are a type of price envelope developed by John BollingerOpens in a new window. (Price envelopes define upper and lower price range levels.) Bollinger Bands are envelopes plotted at a standard deviation level above and below a simple moving average of the price. Because the distance of the bands is based on standard deviation, they adjust to volatility swings in the underlying price. Bollinger Bands use 2 parameters, Period and Standard Deviations, StdDev. The default values are 20 for period, and 2 for standard deviations, although you may customize the combinations. Bollinger bands help determine whether prices are high or low on a relative basis. They are used in pairs, both upper and lower bands and in conjunction with a moving average. Further, the pair of bands is not intended to be used on its own. Use the pair to confirm signals given with other indicators.
+
+- For this, we used the concatenated dataframe with the historical and 7 days of precicted prices.
+<img width="224" alt="Screen Shot 2021-06-16 at 23 45 56" src="https://user-images.githubusercontent.com/78338890/122328151-205dd480-cefd-11eb-8266-a5929fd27dfc.png">
+
 
 
 
