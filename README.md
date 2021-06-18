@@ -165,7 +165,7 @@ After running the above models, the predictions from ARIMA were pretty close to 
 <img width="581" alt="Screen Shot 2021-06-16 at 23 51 02" src="https://user-images.githubusercontent.com/78338890/122328484-beea3580-cefd-11eb-8203-70eabc65a418.png">
 
 - Plot the Bollinger bands signals
-<img width="581" alt="Screen Shot 2021-06-16 at 23 51 02" src="https://user-images.githubusercontent.com/78338890/122328564-e80ac600-cefd-11eb-9462-d7bd0e09611c.png">
+![Screen Shot 2021-06-17 at 12 03 03 PM](https://user-images.githubusercontent.com/78338890/122499168-6c248280-cfbe-11eb-934d-fa04d83a40f3.png)
 
 ### *Moving Average Crossover trading signal*
 
@@ -189,4 +189,11 @@ Moving Average (MA) Crossover indicator signals a crossover of a slower moving a
 - https://www.tradingview.com/support/solutions/43000501974-chaikin-money-flow-cmf/
 - https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/bollinger-bands
 - https://patternswizard.com/moving-average-crossover/
+
+## *CONTRIBUTORS*
+1. Yu Wang
+2. Dipendra Shastri
+3. Jack Que
+4. Christopher Kulathoor
+5. Simran Saini
 
