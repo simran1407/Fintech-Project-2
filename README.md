@@ -190,7 +190,7 @@ Moving Average (MA) Crossover indicator signals a crossover of a slower moving a
 - https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/bollinger-bands
 - https://patternswizard.com/moving-average-crossover/
 
-## *CONTRIBUTORS*
+### *CONTRIBUTORS*
 1. Yu Wang
 2. Dipendra Shastri
 3. Jack Que
