@@ -191,9 +191,9 @@ Moving Average (MA) Crossover indicator signals a crossover of a slower moving a
 - https://patternswizard.com/moving-average-crossover/
 
 ### *CONTRIBUTORS*
-1. Jack Que
+1. Yu Wang
 2. Dipendra Shastri
-3. Yu Wang
+3. Jack Que
 4. Christopher Kulathoor
 5. Simran Saini
 
